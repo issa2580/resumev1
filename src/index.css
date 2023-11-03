@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a192f;
+  color: whitesmoke;
+  font-family: 'Edu TAS Beginner';
+}
+.hoverLogo:hover {
+  transform: rotate(360deg);
+}
+.hoverMedia:hover {
+  color: red;
+}
+.listHover:hover {
+  transform: 'translateY(-3px)',
+}
+.vertical-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vertical-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.vertical-list li {
+  margin-bottom: 10px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px); /* Ajustez la distance de rebond si nécessaire */
+  }
+  60% {
+    transform: translateY(-10px); /* Ajustez la distance de rebond si nécessaire */
+  }
+}
+
+/* styles.css ou votre fichier de styles */
+.arrow-container {
+  position: fixed;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.arrow-container.show {
+  opacity: 0;
+}
+
+/* scrollbar.css */
+/* Largeur de la barre de défilement */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Styles de la piste (track) de la barre de défilement */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Styles du thumb (poignée) de la barre de défilement */
+::-webkit-scrollbar-thumb {
+  background: #233554;
+  border-radius: 5px;
+}
+
+/* Styles du thumb (poignée) de la barre de défilement au survol */
+::-webkit-scrollbar-thumb:hover {
+  background: #64ffda;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .customImage {
+      display: none;
+    }
+    .respSpan{
+      font-size: 10%;
+    }
+}
