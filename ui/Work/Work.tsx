@@ -1,12 +1,20 @@
-import React from 'react'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
+import CoPresentIcon from '@mui/icons-material/CoPresent';
+import ClearIcon from '@mui/icons-material/Clear';
+import Ref from '../../src/assets/ref.jpg'
+import Fintra from '../../src/assets/fintra.png'
+
+import '../../src/index.css'
 
 import Xarala from '../../src/assets/xarala.png'
-import { IconButton, Link } from '@mui/material'
+import ACC from '../../src/assets/acc.png'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Link, Slide } from '@mui/material'
+import React from 'react'
+import { TransitionProps } from '@mui/material/transitions'
 
 const BoxBootcampStyle = {
     position: 'relative',
@@ -18,7 +26,26 @@ const BoxBootcampStyle = {
     left: '30px',
 } as const
 
+const Transition = React.forwardRef(function Transition(
+    props: TransitionProps & {
+        children: React.ReactElement<any, any>
+    },
+    ref: React.Ref<unknown>
+) {
+    return <Slide direction='up' ref={ref} {...props}></Slide>
+})
+
 const Work = () => {
+
+    const [open, setOpen] = React.useState(false)
+
+    const handleOpen = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false)
+    }
     return (
       <Box 
         id='work'
@@ -71,6 +98,7 @@ const Work = () => {
                         py:'50px'
                     }}>
                     <Box 
+                        className="hover-box"
                         sx={{ 
                             ...BoxBootcampStyle,
                             display: {xs: 'none', md: 'flex'},
@@ -78,7 +106,7 @@ const Work = () => {
                             alignItems: {xs: 'center', md: 'center'},
                         }}>
                         <img
-                            src={Xarala}
+                            src={ACC}
                             alt="bg image"
                             style={{
                                 position: 'absolute',
@@ -88,6 +116,7 @@ const Work = () => {
                             }}
                         />
                         <Box
+                            className="hover-content"
                             sx={{
                             width: '100%',
                             height: '100%',
@@ -159,7 +188,7 @@ const Work = () => {
                                     textAlign: 'justify',
                                     padding: '20px 20px',
                                 }}>
-                            A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                                ACC is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
                             </Typography>
                         </Box>
                         <Box
@@ -224,20 +253,122 @@ const Work = () => {
                                         lineHeight: '35px',
                                         textAlign: 'justify',
                                     }}>
-                                    Docker
+                                    Postgres
                                 </Typography>
                             </Box>
-                            <Link
-                                href='#' aria-label='Fintra' target= '_blank'>
-                                <IconButton
-                                    size='large'
-                                    aria-label='my portfolio'
-                                    aria-controls='menu-appbar'
-                                    aria-haspopup='true'
-                                    color='inherit'>
-                                    <OpenInNewIcon sx={{color: '#fff'}} />
-                                </IconButton>
-                            </Link>
+                            <Box>
+                                <Button onClick={handleOpen}>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <CoPresentIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Button>
+                                <Dialog
+                                    sx={{ background: 'rgba(100, 255, 218, 0.5)', }}
+                                    open={open}
+                                    TransitionComponent={Transition}
+                                    keepMounted
+                                    onClose={handleClose}
+                                    aria-describedby='alert-dialog-slide-description'>
+                                    <DialogTitle sx={{textAlign: 'center'}}>
+                                        <Typography sx={{
+                                            fontFamily: 'Edu TAS Beginner',
+                                            fontWeight: '900',
+                                            lineHeight: '34px',
+                                            color: '#233554',
+                                            fontSize: '25px',
+                                            textTransform: 'capitalize',
+                                        }}>
+                                            References
+                                        </Typography>
+                                    </DialogTitle>
+                                    <Box sx={{display:'flex', justifyContent:'center'}}>
+                                    <img
+                                        style={{
+                                            objectFit: 'cover',
+                                            width: '100px',
+                                            height: '100px',
+                                            border: '1px solid',
+                                            borderRadius: '50%',
+                                        }}
+                                        src={Ref} 
+                                        alt='Ousseynou Diop' />
+                                    </Box>
+                                    <DialogContent>
+                                        <DialogContentText 
+                                            sx={{
+                                                color: '#233554',
+                                                fontSize: '18px',
+                                                fontWeight: 400,
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'normal',
+                                                lineHeight: '35px',
+                                                textAlign: 'justify',
+                                            }}
+                                            id='alert-dialog-slide-description'>
+                                            For any additional information or reference regarding my participation 
+                                            in the web application development project led by &nbsp;
+                                            <span 
+                                                style={{color: '#233554',
+                                                    fontSize: '20px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 900
+                                                }}>
+                                                Ousseynou Diop
+                                            </span>, you can 
+                                            contact him using the following contact details: &nbsp;
+                                            <span
+                                                style={{
+                                                    color: '#233554',
+                                                    fontSize: '18px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 700
+                                                }}>
+                                                xaralaxarala@gmail.com
+                                            </span> or at &nbsp;
+                                            <span
+                                                style={{
+                                                    color: '#233554',
+                                                    fontSize: '18px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 700
+                                                }}>
+                                                76-377-22-60
+                                            </span>.
+                                        </DialogContentText> 
+                                    </DialogContent>
+                                    <DialogActions style={{ justifyContent: 'center' }}>
+                                        <Button onClick={handleClose}>
+                                            <IconButton
+                                                size='large'
+                                                aria-label='my portfolio'
+                                                aria-controls='menu-appbar'
+                                                aria-haspopup='true'
+                                                color='inherit'>
+                                                <ClearIcon sx={{color: '#233554'}} />
+                                            </IconButton>
+                                        </Button>
+                                    </DialogActions>
+                                </Dialog>
+                                <Link
+                                    href='https://next.xarala.co' aria-label='Fintra' target= '_blank'>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <OpenInNewIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Link>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
@@ -282,7 +413,7 @@ const Work = () => {
                                     textAlign: 'justify',
                                     color: '#64ffda'
                                 }}>
-                                realized project
+                                contributed project
                             </Typography>
                             <Typography
                                 sx={{
@@ -295,7 +426,7 @@ const Work = () => {
                                     lineHeight: '35px',
                                     textAlign: 'justify',
                                 }}>
-                                Teranga Livre
+                                Xarala Accademy
                             </Typography>
                         </Box> 
                         <Box
@@ -319,7 +450,7 @@ const Work = () => {
                                     textAlign: 'justify',
                                     padding: '20px 20px',
                                 }}>
-                            A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                                ACC is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
                             </Typography>
                         </Box>
                         <Box
@@ -376,22 +507,137 @@ const Work = () => {
                                     }}>
                                     Django REST
                                 </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: '15px',
+                                        textTransform: 'capitalize',
+                                        fontWeight: 400,
+                                        fontFamily: 'Edu TAS Beginner',
+                                        fontStyle: 'italic',
+                                        lineHeight: '35px',
+                                        textAlign: 'justify',
+                                    }}>
+                                    Postgres
+                                </Typography>
                             </Box>
-                            <Link
-                                href='#' aria-label='Fintra' target= '_blank'>
-                                <IconButton
-                                    size='large'
-                                    aria-label='my portfolio'
-                                    aria-controls='menu-appbar'
-                                    aria-haspopup='true'
-                                    color='inherit'>
-                                    <OpenInNewIcon sx={{color: '#fff'}} />
-                                </IconButton>
-                            </Link>
+                            <Box>
+                                <Button onClick={handleOpen}>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <CoPresentIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Button>
+                                <Dialog
+                                    sx={{ background: 'rgba(100, 255, 218, 0.5)', }}
+                                    open={open}
+                                    TransitionComponent={Transition}
+                                    keepMounted
+                                    onClose={handleClose}
+                                    aria-describedby='alert-dialog-slide-description'>
+                                    <DialogTitle sx={{textAlign: 'center'}}>
+                                        <Typography sx={{
+                                            fontFamily: 'Edu TAS Beginner',
+                                            fontWeight: '900',
+                                            lineHeight: '34px',
+                                            color: '#233554',
+                                            fontSize: '25px',
+                                            textTransform: 'capitalize',
+                                        }}>
+                                            References
+                                        </Typography>
+                                    </DialogTitle>
+                                    <Box sx={{display:'flex', justifyContent:'center'}}>
+                                    <img
+                                        style={{
+                                            objectFit: 'cover',
+                                            width: '100px',
+                                            height: '100px',
+                                            border: '1px solid',
+                                            borderRadius: '50%',
+                                        }}
+                                        src={Ref} 
+                                        alt='Ousseynou Diop' />
+                                    </Box>
+                                    <DialogContent>
+                                        <DialogContentText 
+                                            sx={{
+                                                color: '#233554',
+                                                fontSize: '18px',
+                                                fontWeight: 400,
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'normal',
+                                                lineHeight: '35px',
+                                                textAlign: 'justify',
+                                            }}
+                                            id='alert-dialog-slide-description'>
+                                            For any additional information or reference regarding my participation 
+                                            in the web application development project led by &nbsp;
+                                            <span 
+                                                style={{color: '#233554',
+                                                    fontSize: '20px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 900
+                                                }}>
+                                                Ousseynou Diop
+                                            </span>, you can 
+                                            contact him using the following contact details: &nbsp;
+                                            <span
+                                                style={{
+                                                    color: '#233554',
+                                                    fontSize: '18px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 700
+                                                }}>
+                                                xaralaxarala@gmail.com
+                                            </span> or at &nbsp;
+                                            <span
+                                                style={{
+                                                    color: '#233554',
+                                                    fontSize: '18px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 700
+                                                }}>
+                                                76-377-22-60
+                                            </span>.
+                                        </DialogContentText> 
+                                    </DialogContent>
+                                    <DialogActions style={{ justifyContent: 'center' }}>
+                                        <Button onClick={handleClose}>
+                                            <IconButton
+                                                size='large'
+                                                aria-label='my portfolio'
+                                                aria-controls='menu-appbar'
+                                                aria-haspopup='true'
+                                                color='inherit'>
+                                                <ClearIcon sx={{color: '#233554'}} />
+                                            </IconButton>
+                                        </Button>
+                                    </DialogActions>
+                                </Dialog>
+                                <Link
+                                    href='https://xarala.co' aria-label='Fintra' target= '_blank'>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <OpenInNewIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Link>
+                            </Box>
                         </Box>
                     </Box>
 
-                    <Box    
+                    <Box  
+                        className="hover-box"
                         sx={{
                             position: 'relative',
                             width: '100%',
@@ -414,6 +660,7 @@ const Work = () => {
                             }}
                         />
                         <Box
+                            className="hover-content"
                             sx={{
                             width: '100%',
                             height: '100%',
@@ -432,6 +679,7 @@ const Work = () => {
                         py:'50px'
                     }}>
                     <Box 
+                        className="hover-box"
                         sx={{ 
                             ...BoxBootcampStyle,
                             display: {xs: 'none', md: 'flex'},
@@ -439,7 +687,7 @@ const Work = () => {
                             alignItems: {xs: 'center', md: 'center'},
                         }}>
                         <img
-                            src={Xarala}
+                            src={Fintra}
                             alt="bg image"
                             style={{
                                 position: 'absolute',
@@ -449,6 +697,7 @@ const Work = () => {
                             }}
                         />
                         <Box
+                            className="hover-content"
                             sx={{
                             width: '100%',
                             height: '100%',
@@ -496,7 +745,7 @@ const Work = () => {
                                     lineHeight: '35px',
                                     textAlign: 'justify',
                                 }}>
-                                Africa-CodeCamp
+                                Fintra
                             </Typography>
                         </Box> 
                         <Box
@@ -520,7 +769,7 @@ const Work = () => {
                                     textAlign: 'justify',
                                     padding: '20px 20px',
                                 }}>
-                            A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+                                I have successfully managed the maintenance of an application dedicated to efficiently handling monthly salary processes for employees. This solution ensures accurate and timely salary management, contributing to the overall operational efficiency of the organization.
                             </Typography>
                         </Box>
                         <Box
@@ -573,7 +822,7 @@ const Work = () => {
                                         lineHeight: '35px',
                                         textAlign: 'justify',
                                     }}>
-                                    Django
+                                    NodeJS
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -585,26 +834,129 @@ const Work = () => {
                                         lineHeight: '35px',
                                         textAlign: 'justify',
                                     }}>
-                                    Docker
+                                    Postgres
                                 </Typography>
                             </Box>
-                            <Link
-                                href='#' aria-label='Fintra' target= '_blank'>
-                                <IconButton
-                                    size='large'
-                                    aria-label='my portfolio'
-                                    aria-controls='menu-appbar'
-                                    aria-haspopup='true'
-                                    color='inherit'>
-                                    <OpenInNewIcon sx={{color: '#fff'}} />
-                                </IconButton>
-                            </Link>
+                            <Box>
+                                <Button onClick={handleOpen}>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <CoPresentIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Button>
+                                <Dialog
+                                    sx={{ background: 'rgba(100, 255, 218, 0.5)'}}
+                                    open={open}
+                                    TransitionComponent={Transition}
+                                    keepMounted
+                                    onClose={handleClose}
+                                    aria-describedby='alert-dialog-slide-description'>
+                                    <DialogTitle sx={{textAlign: 'center'}}>
+                                        <Typography sx={{
+                                            fontFamily: 'Edu TAS Beginner',
+                                            fontWeight: '900',
+                                            lineHeight: '34px',
+                                            color: '#233554',
+                                            fontSize: '25px',
+                                            textTransform: 'capitalize',
+                                        }}>
+                                            References
+                                        </Typography>
+                                    </DialogTitle>
+                                    <Box sx={{display:'flex', justifyContent:'center'}}>
+                                    <img
+                                        style={{
+                                            objectFit: 'cover',
+                                            width: '100px',
+                                            height: '100px',
+                                            border: '1px solid',
+                                            borderRadius: '50%',
+                                        }}
+                                        src={Ref} 
+                                        alt='Ousseynou Diop' />
+                                    </Box>
+                                    <DialogContent>
+                                        <DialogContentText 
+                                            sx={{
+                                                color: '#233554',
+                                                fontSize: '18px',
+                                                fontWeight: 400,
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'normal',
+                                                lineHeight: '35px',
+                                                textAlign: 'justify',
+                                            }}
+                                            id='alert-dialog-slide-description'>
+                                            For any additional information or reference regarding my participation 
+                                            in the web application development project led by &nbsp;
+                                            <span 
+                                                style={{
+                                                    color: '#233554',
+                                                    fontSize: '20px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 900
+                                                }}>
+                                                Ousseynou Diop
+                                            </span>, you can 
+                                            contact him using the following contact details: &nbsp;
+                                            <span
+                                                style={{
+                                                    color: '#233554',
+                                                    fontSize: '18px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 700
+                                                }}>
+                                                xaralaxarala@gmail.com
+                                            </span> or at &nbsp;
+                                            <span
+                                                style={{
+                                                    color: '#233554',
+                                                    fontSize: '18px',
+                                                    fontFamily: 'Edu TAS Beginner',
+                                                    fontStyle: 'normal',
+                                                    fontWeight: 700
+                                                }}>
+                                                76-377-22-60
+                                            </span>.
+                                        </DialogContentText> 
+                                    </DialogContent>
+                                    <DialogActions style={{ justifyContent: 'center' }}>
+                                        <Button onClick={handleClose}>
+                                            <IconButton
+                                                size='large'
+                                                aria-label='my portfolio'
+                                                aria-controls='menu-appbar'
+                                                aria-haspopup='true'
+                                                color='inherit'>
+                                                <ClearIcon sx={{color: '#233554'}} />
+                                            </IconButton>
+                                        </Button>
+                                    </DialogActions>
+                                </Dialog>
+                                <Link
+                                    href='https://fintra.oryatech.com/' aria-label='Fintra' target= '_blank'>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <OpenInNewIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Link>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
 
                     {/* Box Expenses Trackers  */}
-                <Box 
+                {/* <Box 
                     sx={{ 
                         display:'flex', 
                         justifyContent:'center', 
@@ -738,17 +1090,29 @@ const Work = () => {
                                     Django REST
                                 </Typography>
                             </Box>
-                            <Link
-                                href='#' aria-label='Fintra' target= '_blank'>
-                                <IconButton
-                                    size='large'
-                                    aria-label='my portfolio'
-                                    aria-controls='menu-appbar'
-                                    aria-haspopup='true'
-                                    color='inherit'>
-                                    <OpenInNewIcon sx={{color: '#fff'}} />
-                                </IconButton>
-                            </Link>
+                            <Box>
+                                <Button>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <CoPresentIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Button>
+                                <Link
+                                    href='#' aria-label='Fintra' target= '_blank'>
+                                    <IconButton
+                                        size='large'
+                                        aria-label='my portfolio'
+                                        aria-controls='menu-appbar'
+                                        aria-haspopup='true'
+                                        color='inherit'>
+                                        <OpenInNewIcon sx={{color: '#fff'}} />
+                                    </IconButton>
+                                </Link>
+                            </Box>
                         </Box>
                     </Box>
 
@@ -782,7 +1146,7 @@ const Work = () => {
                             position: 'relative',
                         }} />
                     </Box>
-                </Box>
+                </Box> */}
 
                 
 

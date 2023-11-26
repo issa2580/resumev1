@@ -9,17 +9,6 @@ import Paper from '@mui/material/Paper'
 import { experimentalStyled as styled } from '@mui/material/styles'
 
 import Issa from '../../src/assets/issa.png'
-// import LaptopMacIcon from '@mui/icons-material/LaptopMac'
-// import DataObjectIcon from '@mui/icons-material/DataObject';
-// import AdbIcon from '@mui/icons-material/Adb'
-// import ConstructionIcon from '@mui/icons-material/Construction'
-
-// import TimelineItem from '@mui/lab/TimelineItem'
-// import Timeline from '@mui/lab/Timeline'
-// import TimelineSeparator from '@mui/lab/TimelineSeparator'
-// import TimelineConnector from '@mui/lab/TimelineConnector'
-// import TimelineContent from '@mui/lab/TimelineContent'
-// import TimelineDot from '@mui/lab/TimelineDot'
 
 
 const customAboutStyles = {

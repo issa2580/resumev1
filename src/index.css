@@ -29,6 +29,11 @@ body {
   margin-bottom: 10px;
 }
 
+.hover-box:hover .hover-content {
+  background: none; /* Mettez les styles que vous voulez appliquer au survol ici */
+}
+
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
