@@ -2,9 +2,13 @@ import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import CoPresentIcon from '@mui/icons-material/CoPresent';
 import ClearIcon from '@mui/icons-material/Clear';
+import FolderIcon from '@mui/icons-material/Folder';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 import Ref from '../../src/assets/ref.jpg'
 import Fintra from '../../src/assets/fintra.png'
 
@@ -12,7 +16,7 @@ import '../../src/index.css'
 
 import Xarala from '../../src/assets/xarala.png'
 import ACC from '../../src/assets/acc.png'
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Link, Slide } from '@mui/material'
+import { Button, Card, CardContent, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Link, Slide } from '@mui/material'
 import React from 'react'
 import { TransitionProps } from '@mui/material/transitions'
 
@@ -35,6 +39,45 @@ const Transition = React.forwardRef(function Transition(
     return <Slide direction='up' ref={ref} {...props}></Slide>
 })
 
+const projects = [
+    {
+        folder: <FolderIcon />,
+        link: <OpenInNewIcon />,
+        github: <GitHubIcon />,
+        title: 'Building weather application',
+        desc: 'Building a cutting-edge weather application that goes beyond the forecast. Our app provides real-time weather updates with precision and clarity.',
+        stack1: 'ReactJS',
+        stack2: 'Bootstrap',
+        stack3: 'OpenWeatherMap API',
+        gitLink: 'https://github.com/issa2580/Meteo-react',
+        navLink: 'weather-app-three-snowy.vercel.app/'
+    },
+    {
+        folder: <FolderIcon />,
+        link: <OpenInNewIcon />,
+        github: <GitHubIcon />,
+        title: 'Building money trackers',
+        desc: 'Effortlessly monitor both your expenses and incomes, establish budgetary goals, and gain insights into your spending habits through user-friendly charts. ',
+        stack1: 'HTML',
+        stack2: 'CSS',
+        stack3: 'Javascript',
+        gitLink: 'https://github.com/issa2580/Gestion-budget',
+        navLink: 'gestion-budget.vercel.app'
+    },
+    {
+        folder: <FolderIcon />,
+        link: <OpenInNewIcon />,
+        github: <GitHubIcon />,
+        title: 'Building E-commerce website',
+        desc: 'Our platform seamlessly blends cutting-edge design with intuitive functionality, providing users with a delightful and secure shopping experience.',
+        stack1: 'Mongodb',
+        stack2: 'ExpressJS',
+        stack3: 'ReactJS',
+        gitLink: 'https://github.com/issa2580/idshop',
+        navLink: 'https://github.com/'
+    }
+]
+
 const Work = () => {
 
     const [open, setOpen] = React.useState(false)
@@ -46,6 +89,7 @@ const Work = () => {
     const handleClose = () => {
         setOpen(false)
     }
+
     return (
       <Box 
         id='work'
@@ -169,7 +213,7 @@ const Work = () => {
                         </Box> 
                         <Box
                             sx={{
-                                background:'#233554',
+                                background:'#112240',
                                 borderRadius: '5px',
                                 display: {xs: 'flex', md: 'flex'},
                                 justifyContent: {xs: 'end', md: 'center'},
@@ -431,7 +475,7 @@ const Work = () => {
                         </Box> 
                         <Box
                             sx={{
-                                background:'#233554',
+                                background:'#112240',
                                 borderRadius: '5px',
                                 display: {xs: 'flex', md: 'flex'},
                                 justifyContent: {xs: 'start', md: 'center'},
@@ -750,7 +794,7 @@ const Work = () => {
                         </Box> 
                         <Box
                             sx={{
-                                background:'#233554',
+                                background:'#112240',
                                 borderRadius: '5px',
                                 display: {xs: 'flex', md: 'flex'},
                                 justifyContent: {xs: 'end', md: 'center'},
@@ -955,198 +999,142 @@ const Work = () => {
                     </Box>
                 </Box>
 
-                    {/* Box Expenses Trackers  */}
-                {/* <Box 
-                    sx={{ 
-                        display:'flex', 
-                        justifyContent:'center', 
-                        alignItems:'center',
-                        py:'50px'
+                <Typography 
+                    sx={{
+                        pb: '20px',
+                        fontSize: '15px',
+                        textTransform: 'capitalize',
+                        fontWeight: 400,
+                        fontFamily: 'Edu TAS Beginner',
+                        whiteSpace: 'nowrap',
+                        fontStyle: 'normal',
+                        lineHeight: '35px',
+                        textAlign: 'justify',
+                        color: '#64ffda',
+                        mx: {xs: '50px'},
                     }}>
-                    
-                    <Box 
-                        sx={{
-                            display:'flex',
-                            width:'100%',
-                            flexDirection: 'column',
-                            position: 'relative',
-                            left: '30px',
-                            gap:'10px',
-                            zIndex: 2
-                        }}>
-                        <Box
-                            sx={{
-                                display: {xs: 'flex', md: 'flex'},
-                                flexDirection: {xs: 'column', md: 'column'},
-                                justifyContent: {xs: 'start', md: 'start'},
-                                alignItems: {xs: 'start', md: 'start'},
-                                width: {xs: '90%', md: '100%'},
-                                margin: {xs: '0 10px', md: '0'}
-                            }}>
-                            <Typography
-                                sx={{
-                                    fontSize: '15px',
-                                    textTransform: 'capitalize',
-                                    fontWeight: 400,
-                                    fontFamily: 'Edu TAS Beginner',
-                                    whiteSpace: 'nowrap',
-                                    fontStyle: 'normal',
-                                    lineHeight: '35px',
-                                    textAlign: 'justify',
-                                    color: '#64ffda'
-                                }}>
-                                realized project
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    fontSize: '30px',
-                                    textTransform: 'capitalize',
-                                    fontWeight: 900,
-                                    fontFamily: 'Edu TAS Beginner',
-                                    whiteSpace: 'nowrap',
-                                    fontStyle: 'normal',
-                                    lineHeight: '35px',
-                                    textAlign: 'justify',
-                                }}>
-                                Teranga Livre
-                            </Typography>
-                        </Box> 
-                        <Box
-                            sx={{
-                                background:'#233554',
-                                borderRadius: '5px',
-                                display: {xs: 'flex', md: 'flex'},
-                                justifyContent: {xs: 'start', md: 'center'},
-                                alignItems: {xs: 'start', md: 'center'},
-                                width: {xs: '90%', md: '100%'},
-                                margin: {xs: '0 10px', md: '0'}
-                            }}>
-                            <Typography
-                                sx={{
-                                    fontSize: '15px',
-                                    textTransform: 'capitalize',
-                                    fontWeight: 600,
-                                    fontFamily: 'Edu TAS Beginner',
-                                    fontStyle: 'normal',
-                                    lineHeight: '35px',
-                                    textAlign: 'justify',
-                                    padding: '20px 20px',
-                                }}>
-                            A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
-                            </Typography>
-                        </Box>
-                        <Box
-                            sx={{
-                                display: {xs: 'flex', md: 'flex'},
-                                flexDirection: {xs: 'column', md: 'column'},
-                                justifyContent: {xs: 'start', md: 'start'},
-                                alignItems: {xs: 'start', md: 'start'},
-                                width: {xs: '90%', md: '100%'},
-                                margin: {xs: '0 10px', md: '0'}
-                            }}>
-                            <Box
-                                sx={{
-                                    width:'100%',
-                                    display:'flex',
-                                    flexDirection: 'row',
-                                    justifyContent: 'start',
-                                    alignItems: 'start',
-                                    gap:'50px'
-                                }}>
-                                <Typography
-                                    sx={{
-                                        fontSize: '15px',
-                                        textTransform: 'capitalize',
-                                        fontWeight: 400,
-                                        fontFamily: 'Edu TAS Beginner',
-                                        fontStyle: 'italic',
-                                        lineHeight: '35px',
-                                        textAlign: 'justify',
-                                    }}>
-                                    Bootstrap
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontSize: '15px',
-                                        textTransform: 'capitalize',
-                                        fontWeight: 400,
-                                        fontFamily: 'Edu TAS Beginner',
-                                        fontStyle: 'italic',
-                                        lineHeight: '35px',
-                                        textAlign: 'justify',
-                                    }}>
-                                    Django
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontSize: '15px',
-                                        textTransform: 'capitalize',
-                                        fontWeight: 400,
-                                        fontFamily: 'Edu TAS Beginner',
-                                        fontStyle: 'italic',
-                                        lineHeight: '35px',
-                                        textAlign: 'justify',
-                                    }}>
-                                    Django REST
-                                </Typography>
-                            </Box>
-                            <Box>
-                                <Button>
-                                    <IconButton
-                                        size='large'
-                                        aria-label='my portfolio'
-                                        aria-controls='menu-appbar'
-                                        aria-haspopup='true'
-                                        color='inherit'>
-                                        <CoPresentIcon sx={{color: '#fff'}} />
-                                    </IconButton>
-                                </Button>
-                                <Link
-                                    href='#' aria-label='Fintra' target= '_blank'>
-                                    <IconButton
-                                        size='large'
-                                        aria-label='my portfolio'
-                                        aria-controls='menu-appbar'
-                                        aria-haspopup='true'
-                                        color='inherit'>
-                                        <OpenInNewIcon sx={{color: '#fff'}} />
-                                    </IconButton>
-                                </Link>
-                            </Box>
-                        </Box>
-                    </Box>
+                        Realized project
+                    </Typography>
+                <Box 
+                    sx={{
+                        display: {md: 'grid', xs: 'flex'},
+                        flexDirection: {xs: 'column'},
+                        justifyContent: {xs: 'column'},
+                        alignItems: {xs: 'column'},
+                        gridTemplateColumns: 'repeat(3, 1fr)', 
+                        gap: '20px',
+                        pb: '50px',
 
-                    <Box    
-                        sx={{
-                            position: 'relative',
-                            width: '100%',
-                            height: '300px',
-                            borderRadius: '5px',
-                            overflow: 'hidden',
-                            right: '30px',
-                            display: {xs: 'none', md: 'flex'},
-                            justifyContent: {xs: 'center', md: 'center'},
-                            alignItems: {xs: 'center', md: 'center'},
-                        }}>
-                        <img
-                            src={Xarala}
-                            alt="bg image"
-                            style={{
-                                position: 'absolute',
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                            }}
-                        />
-                        <Box
+                    }}>
+                    {projects.map(project =>(
+                        <Card 
                             sx={{
-                            width: '100%',
-                            height: '100%',
-                            background: 'rgba(100, 255, 218, 0.5)',
-                            position: 'relative',
-                        }} />
-                    </Box>
-                </Box> */}
+                                background: '#112240',
+                                mx: {xs: '50px', md: '0px'},
+                                '&:hover': {
+                                    transition: 'all 0.3s ease',
+                                    cursor: 'pointer',
+                                    transform: 'translateY(-10px)',
+                                }
+                            }} 
+                            variant='outlined'>
+                                <CardContent
+                                    sx={{
+                                        mx: '20px',
+                                        color: '#FFFFFF',
+                                    }}>
+                                    <Box sx={{display: 'flex', justifyContent: 'space-between', pb: '10px'}}>
+                                        <Box
+                                            sx={{
+                                                
+                                                '&:hover': {
+                                                    color: '#64ffda',
+                                                }
+                                            }}>
+                                            {project.folder}
+                                        </Box>
+                                        <Box sx={{display: 'flex', gap: '10px'}}>
+                                            <Link style={{color: 'white'}} href={project.gitLink} target='_blank'>
+                                            {project.github}
+                                            </Link>
+                                            <Link style={{color: 'white'}} href={project.navLink} target='_blank'>
+                                            {project.link}
+                                            </Link>
+                                        </Box>
+                                    </Box>
+                                    <Typography 
+                                        sx={{
+                                            fontSize: '25px',
+                                            fontWeight: 900,
+                                            fontStyle: 'normal',
+                                            fontFamily: 'Helvetica',
+                                            lineHeight: '34px',
+                                            '&:hover': {
+                                                color: '#64ffda',
+                                                fontSize: '28px',
+                                            }
+                                            
+                                        }}>
+                                            {project.title}
+                                        </Typography>
+                                    <Typography
+                                        sx={{
+                                            fontSize: '15px',
+                                            textTransform: 'capitalize',
+                                            fontWeight: 600,
+                                            fontFamily: 'Edu TAS Beginner',
+                                            fontStyle: 'normal',
+                                            lineHeight: '35px',
+                                            textAlign: 'justify',
+                                            padding: '10px 0',
+                                        }}>
+                                        {project.desc}
+                                    </Typography>
+                                    <Box sx={{display: 'flex', gap:'20px'}}>
+                                        <Typography
+                                            sx={{
+                                                pb:'10px',
+                                                fontSize: '15px',
+                                                textTransform: 'capitalize',
+                                                fontWeight: 400,
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'italic',
+                                                lineHeight: '35px',
+                                                textAlign: 'justify',
+                                            }}>
+                                            {project.stack1}
+                                        </Typography>
+                                        <Typography
+                                            sx={{
+                                                pb:'10px',
+                                                fontSize: '15px',
+                                                textTransform: 'capitalize',
+                                                fontWeight: 400,
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'italic',
+                                                lineHeight: '35px',
+                                                textAlign: 'justify',
+                                            }}>
+                                            {project.stack2}
+                                        </Typography>
+                                        <Typography
+                                            sx={{
+                                                pb:'10px',
+                                                fontSize: '15px',
+                                                textTransform: 'capitalize',
+                                                fontWeight: 400,
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'italic',
+                                                lineHeight: '35px',
+                                                textAlign: 'justify',
+                                            }}>
+                                            {project.stack3}
+                                        </Typography>
+                                        </Box>
+                                </CardContent>
+                        </Card>
+                    ))}
+                </Box>
 
                 
 
