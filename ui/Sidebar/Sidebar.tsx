@@ -102,8 +102,8 @@ const Sidebar = () => {
                                     height: '175px',
                                     backgroundColor: 'whitesmoke',
                                     position: 'relative',
-                                    // top: '20px',
-                                    left: '65px'
+                                    // top: {xs: '150px', md: '50px', lg: '10px'},
+                                    left: {xs: '70px', md: '70px', lg: '65px'}
                                 }}
                             />
                         </Box>
