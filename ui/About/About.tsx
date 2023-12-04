@@ -34,59 +34,46 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const tools = [
-    {
-        id: 1,
-        title: 'frontend'
-    },
-    {
-        id: 1,
-        title: 'backend'
-    },
-    {
-        id: 1,
-        title: 'databases'
-    },
-]
+
 const frontend = [
     {
         id: 1,
         title: '▹ ReactJS'
     },
     {
-        id: 1,
-        title: '▹ ExpressJS'
+        id: 2,
+        title: '▹ NextJS'
     },
     {
-        id: 1,
-        title: '▹ Mysql'
+        id: 3,
+        title: '▹ Angular'
     },
 ]
 const backend = [
     {
         id: 1,
-        title: '▹ NextJS'
+        title: '▹ ExpressJS'
     },
     {
-        id: 1,
+        id: 2,
         title: '▹ NestJS'
     },
     {
-        id: 1,
-        title: '▹ Postgres'
+        id: 3,
+        title: '▹ Django'
     },
 ]
 const databases = [
     {
         id: 1,
-        title: '▹ Angular'
+        title: '▹ Mysql'
     },
     {
-        id: 1,
-        title: '▹ Django'
+        id: 2,
+        title: '▹ Postgres'
     },
     {
-        id: 1,
+        id: 3,
         title: '▹ Mongodb'
     },
 ]
@@ -122,7 +109,7 @@ const About = () => {
                     </span>
                     <Typography
                         sx={{
-                            fontSize:{xs: '20px', md: '32px'},
+                            fontSize:{xs: '18px', md: '32px'},
                             textTransform: 'capitalize',
                             fontWeight: 900,
                             fontFamily: 'Edu TAS Beginner',
@@ -132,7 +119,7 @@ const About = () => {
                     </Typography>
                     <Divider 
                         sx={{
-                            width: '200px', 
+                            width: {xs: '50px', md: '200pxpx'}, 
                             height: 0.1, 
                             border: '1px solid #64ffda',
                         }} 
@@ -146,13 +133,12 @@ const About = () => {
                         justifyContent:{xs:'center', md: 'space-between'},
                         alignItems:{xs:'center', md: 'space-between'},
                         gap: {xs:'0', md: '50px',},
-                        paddingBottom:{xs:'100px', md: '0'},
                         }}>
                         <Box sx={{width: '100%'}}>
                             <Typography
                                 sx={{
                                     ...customAboutStyles,
-                                    fontSize:{xs: '15px', md: '20px'}
+                                    fontSize:{xs: '18px', md: '20px'}
                                 }}>
                                 Passionate about Tech and the world of the Web.
                                 My curiosity, my sense of challenge and my taste for solving problems 
@@ -163,7 +149,7 @@ const About = () => {
                             <Typography
                                 sx={{
                                     ...customAboutStyles,
-                                    fontSize:{xs: '15px', md: '20px'}
+                                    fontSize:{xs: '18px', md: '20px'}
                                 }}>
                                 I work effectively remotely with the best communication and project management 
                                 tools such as: <span style={{...spanStyle}}>Discord</span>, <span style={{...spanStyle}}>Zoom</span>, <span style={{...spanStyle}}>Github</span> and <span style={{...spanStyle}}>Gitlab</span>
@@ -171,104 +157,120 @@ const About = () => {
                             <Typography 
                                 sx={{
                                     ...customAboutStyles,
-                                    fontSize:{xs: '15px', md: '20px'}
+                                    fontSize:{xs: '18px', md: '20px'}
                                 }}>
                                 Now, I work on these modern full <span style={{...spanStyle}}>Javascript</span>, <span style={{...spanStyle}}>Typescript</span> and <span style={{...spanStyle}}>Python</span> stacks that I evolve professionally. I define myself as a fullstack developer.
                             </Typography>
-                            <Box sx={{ flexGrow: 1}}>
-                                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                                    {tools.map((tool, index) => (
-                                    <Grid item xs={1} sm={4} md={4} key={index}>
+                            <Grid container spacing={2}>
+                            {/* Frontend */}
+                            <Grid
+                                item lg={4} md={12} xs={12}>
+                                <Typography
+                                    sx={{
+                                        fontSize: '20px',
+                                        fontFamily: 'Edu TAS Beginner',
+                                        fontStyle: 'normal',
+                                        fontWeight: 900,
+                                        textTransform: 'capitalize',
+                                        color: '#whiteSmoke',
+                                        textAlign: 'center'
+                                    }}>
+                                    Frontend
+                                </Typography>
+                                {frontend.map((item) => (
+                                    <Item>
                                         <Typography
+                                            key={item.id}
                                             sx={{
-                                                fontSize: '20px',
+                                                fontSize: '15px',
                                                 fontFamily: 'Edu TAS Beginner',
                                                 fontStyle: 'normal',
-                                                fontWeight: 900,
+                                                fontWeight: 600,
                                                 textTransform: 'capitalize',
-                                                color: '#whiteSmoke'
+                                                color: '#64ffda'
                                             }}>
-                                            {tool.title}
+                                            {item.title}
                                         </Typography>
-                                    </Grid>
-                                    ))}
-                                </Grid>
-                            </Box>
-                            <Box sx={{ flexGrow: 1}}>
-                                <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                                    {frontend.map((front, index) => (
-                                    <Grid item xs={1} sm={4} md={4} key={index}>
-                                        <Item>
-                                            <Typography
-                                                sx={{
-                                                    fontSize: '15px',
-                                                    fontFamily: 'Edu TAS Beginner',
-                                                    fontStyle: 'normal',
-                                                    fontWeight: 600,
-                                                    textTransform: 'capitalize',
-                                                    color: '#64ffda'
-                                                }}>
-                                                {front.title}
-                                            </Typography>
-                                        </Item>
-                                    </Grid>
-                                    ))}
-                                </Grid>
-                            </Box>
-                            <Box sx={{ flexGrow: 1, py:1}}>
-                                <Grid container spacing={{ xs: 1, md: 1 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                                    {backend.map((back, index) => (
-                                    <Grid item xs={1} sm={4} md={4} key={index}>
-                                        <Item>
-                                            <Typography
-                                                sx={{
-                                                    fontSize: '15px',
-                                                    fontFamily: 'Edu TAS Beginner',
-                                                    fontStyle: 'normal',
-                                                    fontWeight: 600,
-                                                    textTransform: 'capitalize',
-                                                    color: '#64ffda'
-                                                }}>
-                                                {back.title}
-                                            </Typography>
-                                        </Item>
-                                    </Grid>
-                                    ))}
-                                </Grid>
-                            </Box>
-                            <Box sx={{ flexGrow: 1}}>
-                                <Grid 
-                                    container 
-                                    spacing={{ xs: 1, md: 1 }} 
-                                    columns={{ xs: 4, sm: 8, md: 12 }}>
-                                    {databases.map((db, index) => (
-                                    <Grid item xs={1} sm={4} md={4} key={index}>
-                                        <Item>
-                                            <Typography
-                                                sx={{
-                                                    fontSize: '15px',
-                                                    fontFamily: 'Edu TAS Beginner',
-                                                    fontStyle: 'normal',
-                                                    fontWeight: 600,
-                                                    textTransform: 'capitalize',
-                                                    color: '#64ffda'
-                                                }}>
-                                                {db.title}
-                                            </Typography>
-                                        </Item>
-                                    </Grid>
-                                    ))}
-                                </Grid>
-                            </Box>
+                                    </Item>
+                                ))}
+                            </Grid>
+
+                            {/* Backend */}
+                            <Grid item lg={4} md={12} xs={12}>
+                                <Typography
+                                    sx={{
+                                        fontSize: '20px',
+                                        fontFamily: 'Edu TAS Beginner',
+                                        fontStyle: 'normal',
+                                        fontWeight: 900,
+                                        textTransform: 'capitalize',
+                                        color: '#whiteSmoke',
+                                        textAlign: 'center'
+                                    }}>
+                                    Backend
+                                </Typography>
+                                {backend.map((back) => (
+                                    <Item>
+                                        <Typography
+                                            key={back.id}
+                                            sx={{
+                                                fontSize: '15px',
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'normal',
+                                                fontWeight: 600,
+                                                textTransform: 'capitalize',
+                                                color: '#64ffda'
+                                            }}>
+                                            {back.title}
+                                        </Typography>
+                                    </Item>
+                                ))}
+                            </Grid>
+
+                            {/* Databases */}
+                            <Grid item lg={4} md={12} xs={12}>
+                                <Typography
+                                    sx={{
+                                        fontSize: '20px',
+                                        fontFamily: 'Edu TAS Beginner',
+                                        fontStyle: 'normal',
+                                        fontWeight: 900,
+                                        textTransform: 'capitalize',
+                                        color: '#whiteSmoke',
+                                        textAlign: 'center'
+                                    }}>
+                                    Databases
+                                </Typography>
+                                {databases.map((db) => (
+                                    <Item>
+                                        <Typography
+                                            key={db.id}
+                                            sx={{
+                                                fontSize: '15px',
+                                                fontFamily: 'Edu TAS Beginner',
+                                                fontStyle: 'normal',
+                                                fontWeight: 600,
+                                                textTransform: 'capitalize',
+                                                color: '#64ffda'
+                                            }}>
+                                            {db.title}
+                                        </Typography>
+                                    </Item>
+                                ))}
+                            </Grid>
+                        </Grid>  
                         </Box>
 
                         <Box
                             sx={{
+                                mt: '25px',
+                                display: {xs: 'none', md: 'block', lg: 'block'},
                                 position: 'relative',
                                 width: '100%',
-                                height: { xs: '500px', md: '580px' },
+                                height: { xs: '500px', md: '540px' },
                                 borderRadius: '5px',
                                 overflow: 'hidden',
+                                objectFit: 'cover',
                                 '&:hover': {
                                     borderColor: '#64ffda',
                                     margin: '0 auto 10px',

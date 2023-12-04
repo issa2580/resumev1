@@ -115,7 +115,7 @@ const Work = () => {
                     </span>
                     <Typography
                         sx={{
-                            fontSize:{xs: '20px', md: '32px'},
+                            fontSize:{xs: '15px', md: '32px'},
                             textTransform: 'capitalize',
                             fontWeight: 900,
                             fontFamily: 'Edu TAS Beginner',
@@ -125,7 +125,7 @@ const Work = () => {
                     </Typography>
                     <Divider 
                         sx={{
-                            width:{xs: '100px', md: '200px'},
+                            width:{xs: '50px', md: '200px'},
                             height: '1px', 
                             border: '1px solid #64ffda',
                             position: 'relative',
@@ -229,7 +229,7 @@ const Work = () => {
                                     fontFamily: 'Edu TAS Beginner',
                                     fontStyle: 'normal',
                                     lineHeight: '35px',
-                                    textAlign: 'justify',
+                                    textAlign: {xs: 'start', md: 'start', lg: 'justify'},
                                     padding: '20px 20px',
                                 }}>
                                 ACC is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
@@ -249,7 +249,7 @@ const Work = () => {
                                     flexDirection: 'row',
                                     justifyContent: 'end',
                                     alignItems: 'end',
-                                    gap:'50px'
+                                    gap: {xs: '10px', md: '10px', lg: '50px'}
                                 }}>
                                 <Typography
                                     sx={{
@@ -486,12 +486,11 @@ const Work = () => {
                             <Typography
                                 sx={{
                                     fontSize: '15px',
-                                    textTransform: 'capitalize',
                                     fontWeight: 600,
                                     fontFamily: 'Edu TAS Beginner',
                                     fontStyle: 'normal',
                                     lineHeight: '35px',
-                                    textAlign: 'justify',
+                                    textAlign: {xs: 'start', md: 'start', lg: 'justify'},
                                     padding: '20px 20px',
                                 }}>
                                 ACC is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
@@ -513,7 +512,7 @@ const Work = () => {
                                     flexDirection: 'row',
                                     justifyContent: 'start',
                                     alignItems: 'start',
-                                    gap:'50px'
+                                    gap: {xs: '10px', md: '10px', lg: '50px'}
                                 }}>
                                 <Typography
                                     sx={{
@@ -805,12 +804,11 @@ const Work = () => {
                             <Typography
                                 sx={{
                                     fontSize: '15px',
-                                    textTransform: 'capitalize',
                                     fontWeight: 600,
                                     fontFamily: 'Edu TAS Beginner',
                                     fontStyle: 'normal',
                                     lineHeight: '35px',
-                                    textAlign: 'justify',
+                                    textAlign: {xs: 'start', md: 'start', lg: 'justify'},
                                     padding: '20px 20px',
                                 }}>
                                 I have successfully managed the maintenance of an application dedicated to efficiently handling monthly salary processes for employees. This solution ensures accurate and timely salary management, contributing to the overall operational efficiency of the organization.
@@ -830,7 +828,7 @@ const Work = () => {
                                     flexDirection: 'row',
                                     justifyContent: 'end',
                                     alignItems: 'end',
-                                    gap:'50px'
+                                    gap: {xs: '10px', md: '10px', lg: '50px'}
                                 }}>
                                 <Typography
                                     sx={{
@@ -1085,7 +1083,7 @@ const Work = () => {
                                             fontFamily: 'Edu TAS Beginner',
                                             fontStyle: 'normal',
                                             lineHeight: '35px',
-                                            textAlign: 'justify',
+                                            textAlign: {xs: 'start', md: 'start', lg: 'justify'},
                                             padding: '10px 0',
                                         }}>
                                         {project.desc}
