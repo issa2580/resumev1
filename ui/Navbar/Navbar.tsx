@@ -55,6 +55,23 @@ const hoverSpanStyle = {
     }
 }as const
 
+const handleDownload = () => {
+    const fileUrl = '../resume/Issa_Diop_Full_Stack_Developer.pdf'; // Remplacez par le chemin correct
+
+    // Créez un élément <a> temporaire pour déclencher le téléchargement
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    
+    // Cliquez sur l'élément <a> pour déclencher le téléchargement
+    link.click();
+
+    // Supprimez l'élément <a> temporaire
+    document.body.removeChild(link);
+};
+
+
 const Navbar = () => {
 
     const [anchorElNav, setAnchorElNav] = useState<EventTarget | null>(null)
@@ -194,6 +211,7 @@ const Navbar = () => {
                         ))}
                     </Box>
                     <Button
+                        onClick={handleDownload}
                         sx={{
                             color: '#64ffda',
                             display: 'flex',

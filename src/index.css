@@ -94,4 +94,7 @@ body {
     .respSpan{
       font-size: 10%;
     }
+    .hideImage {
+      display: 'none',
+    }
 }

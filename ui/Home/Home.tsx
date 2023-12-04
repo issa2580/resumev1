@@ -39,7 +39,7 @@ const Home = () => {
         justifyContent:'center',
         alignItems:'center',
         pt: {xs: '50px', md: '100px'},
-        minHeight: '96vh',
+        minHeight: {xs: '80vh', md: '60vh', lg: '95vh'},
         gap: '30px',
       }}>
       <Box 
@@ -146,6 +146,7 @@ const Home = () => {
         <Typography
           sx={{
             fontFamily: 'Edu TAS Beginner',
+            textTransform: 'capitalize'
           }}>
             Check out my blog
         </Typography>

@@ -48,7 +48,7 @@ import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem
     },
     {
       icon: <WorkspacePremiumIcon />,
-      title: 'HTML CSS JAVASCRIPT PHP RESPONSDESIGN',
+      title: 'HTML CSS JS PHP',
       date: '2020 - 2021',
       university: 'Sololearn plateform',
     }
@@ -101,7 +101,7 @@ const Experience = () => {
                     </span>
                     <Typography
                         sx={{
-                            fontSize:{xs: '20px', md: '32px'},
+                            fontSize:{xs: '18px', md: '32px'},
                             textTransform: 'capitalize',
                             fontWeight: 900,
                             fontFamily: 'Edu TAS Beginner',
@@ -111,7 +111,7 @@ const Experience = () => {
                     </Typography>
                     <Divider 
                         sx={{
-                            width:{xs: '110px', md: '200px'},
+                            width:{xs: '50px', md: '200px'},
                             height: 0.1, 
                             border: '1px solid #64ffda',
                         }} 
@@ -186,9 +186,10 @@ const Experience = () => {
                             sx={{
                               display:'flex',
                               flexDirection: {xs: 'column', md: 'row'},
-                              textAlign: {xs: 'start', md: 'center'},
-                              justifyContent: {xs: 'start', md: 'center'},
-                              alignItems: {xs: 'start', md: 'center'},
+                              textAlign: {xs: 'center', md: 'center'},
+                              justifyContent: {xs: 'center', md: 'center'},
+                              alignItems: {xs: 'center', md: 'center'},
+                              // background: 'red'
                             }}>
                             <Box 
                               sx={{
@@ -219,8 +220,8 @@ const Experience = () => {
                                   <TimelineContent>
                                     <Typography 
                                       variant="h6"
-                                      style={{
-                                        fontSize: '18px',
+                                      sx={{
+                                        fontSize:{xs: '15px', md: '18px'},
                                         textTransform: 'capitalize',
                                         fontWeight: 600,
                                         fontFamily: 'Edu TAS Beginner',
@@ -268,9 +269,9 @@ const Experience = () => {
                               sx={{
                                 display:'flex',
                                 flexDirection: {xs: 'column', md: 'row'},
-                                textAlign: {xs: 'start', md: 'center'},
-                                justifyContent: {xs: 'start', md: 'center'},
-                                alignItems: {xs: 'start', md: 'center'},
+                                textAlign: {xs: 'center', md: 'center'},
+                                justifyContent: {xs: 'center', md: 'center'},
+                                alignItems: {xs: 'center', md: 'center'},
                               }}>
                               <Box 
                                 sx={{
@@ -301,8 +302,8 @@ const Experience = () => {
                                   <TimelineContent>
                                     <Typography 
                                       variant="h6"
-                                      style={{
-                                        fontSize: '18px',
+                                      sx={{
+                                        fontSize:{xs: '15px', md: '18px'},
                                         textTransform: 'capitalize',
                                         fontWeight: 600,
                                         fontFamily: 'Edu TAS Beginner',
