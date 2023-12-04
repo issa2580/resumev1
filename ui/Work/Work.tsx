@@ -50,7 +50,7 @@ const projects = [
         stack2: 'Bootstrap',
         stack3: 'OpenWeatherMap API',
         gitLink: 'https://github.com/issa2580/Meteo-react',
-        navLink: 'weather-app-three-snowy.vercel.app/'
+        navLink: 'https://weather-app-three-snowy.vercel.app/'
     },
     {
         folder: <FolderIcon />,
@@ -62,19 +62,19 @@ const projects = [
         stack2: 'CSS',
         stack3: 'Javascript',
         gitLink: 'https://github.com/issa2580/Gestion-budget',
-        navLink: 'gestion-budget.vercel.app'
+        navLink: 'https://gestion-budget.vercel.app'
     },
     {
         folder: <FolderIcon />,
         link: <OpenInNewIcon />,
         github: <GitHubIcon />,
-        title: 'Building E-commerce website',
-        desc: 'Our platform seamlessly blends cutting-edge design with intuitive functionality, providing users with a delightful and secure shopping experience.',
+        title: 'Building Teranga livre',
+        desc: 'Teranga Livre is a versatile online platform that facilitates the buying and selling of books. The platform is a marketplace where users can purchase books. ',
         stack1: 'Mongodb',
         stack2: 'ExpressJS',
         stack3: 'ReactJS',
-        gitLink: 'https://github.com/issa2580/idshop',
-        navLink: 'https://github.com/'
+        gitLink: 'https://github.com/issa2580/terangalivre',
+        navLink: 'https://terangalivre-lkzl.vercel.app/'
     }
 ]
 
@@ -208,7 +208,7 @@ const Work = () => {
                                     lineHeight: '35px',
                                     textAlign: 'justify',
                                 }}>
-                                Africa-CodeCamp
+                                Xarala
                             </Typography>
                         </Box> 
                         <Box
@@ -232,7 +232,7 @@ const Work = () => {
                                     textAlign: {xs: 'start', md: 'start', lg: 'justify'},
                                     padding: '20px 20px',
                                 }}>
-                                ACC is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
+                                Xarala is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
                             </Typography>
                         </Box>
                         <Box
@@ -261,19 +261,7 @@ const Work = () => {
                                         lineHeight: '35px',
                                         textAlign: 'justify',
                                     }}>
-                                    NextJS
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontSize: '15px',
-                                        textTransform: 'capitalize',
-                                        fontWeight: 400,
-                                        fontFamily: 'Edu TAS Beginner',
-                                        fontStyle: 'italic',
-                                        lineHeight: '35px',
-                                        textAlign: 'justify',
-                                    }}>
-                                    Material UI
+                                    Bootstrap
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -286,6 +274,18 @@ const Work = () => {
                                         textAlign: 'justify',
                                     }}>
                                     Django
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: '15px',
+                                        textTransform: 'capitalize',
+                                        fontWeight: 400,
+                                        fontFamily: 'Edu TAS Beginner',
+                                        fontStyle: 'italic',
+                                        lineHeight: '35px',
+                                        textAlign: 'justify',
+                                    }}>
+                                    Django Rest
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -470,7 +470,7 @@ const Work = () => {
                                     lineHeight: '35px',
                                     textAlign: 'justify',
                                 }}>
-                                Xarala Accademy
+                                Africa Code Camp
                             </Typography>
                         </Box> 
                         <Box
@@ -493,7 +493,7 @@ const Work = () => {
                                     textAlign: {xs: 'start', md: 'start', lg: 'justify'},
                                     padding: '20px 20px',
                                 }}>
-                                ACC is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
+                                ACC a new version of xarala is an interactive e-learning platform aimed at providing engaging courses and meeting various educational needs. Our goal is to empower learners through a dynamic and user-friendly online learning experience.
                             </Typography>
                         </Box>
                         <Box
@@ -524,7 +524,19 @@ const Work = () => {
                                         lineHeight: '35px',
                                         textAlign: 'justify',
                                     }}>
-                                    Bootstrap
+                                    NextJS
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: '15px',
+                                        textTransform: 'capitalize',
+                                        fontWeight: 400,
+                                        fontFamily: 'Edu TAS Beginner',
+                                        fontStyle: 'italic',
+                                        lineHeight: '35px',
+                                        textAlign: 'justify',
+                                    }}>
+                                    Material UI
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -537,18 +549,6 @@ const Work = () => {
                                         textAlign: 'justify',
                                     }}>
                                     Django
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontSize: '15px',
-                                        textTransform: 'capitalize',
-                                        fontWeight: 400,
-                                        fontFamily: 'Edu TAS Beginner',
-                                        fontStyle: 'italic',
-                                        lineHeight: '35px',
-                                        textAlign: 'justify',
-                                    }}>
-                                    Django REST
                                 </Typography>
                                 <Typography
                                     sx={{
