@@ -1,4 +1,3 @@
-import React from 'react'
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 
@@ -13,8 +12,6 @@ const listStyle = {
 }
 
 const Sidebar = () => {
-
-     const email = 'issadiop9408@gmail.com';
 
     return (
         <Box>

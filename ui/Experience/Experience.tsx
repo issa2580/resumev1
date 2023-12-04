@@ -130,7 +130,7 @@ const Experience = () => {
                   }}>
                   <Tabs
                     value={clickedTab}
-                    onChange={(event, newValue) => setClickedTab(newValue)}
+                    onChange={(_, newValue) => setClickedTab(newValue)}
                     orientation="vertical"
                     sx={{ borderRight: 5, borderColor: 'divider'}}>
                     <Tab 
