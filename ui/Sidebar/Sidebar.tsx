@@ -94,7 +94,7 @@ const Sidebar = () => {
                                     color: '#64ffda',
                                 }}
                             >
-                                issadiop9408@gmail.com
+                                issadiop25@gmail.com
                             </Typography>
                             <Box
                                 sx={{
@@ -102,8 +102,8 @@ const Sidebar = () => {
                                     height: '175px',
                                     backgroundColor: 'whitesmoke',
                                     position: 'relative',
-                                    // top: {xs: '150px', md: '50px', lg: '10px'},
-                                    left: {xs: '70px', md: '70px', lg: '65px'}
+                                    // top: '20px',
+                                    left: '60px'
                                 }}
                             />
                         </Box>
