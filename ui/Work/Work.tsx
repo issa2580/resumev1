@@ -50,7 +50,7 @@ const projects = [
         stack2: 'Bootstrap',
         stack3: 'OpenWeatherMap API',
         gitLink: 'https://github.com/issa2580/Meteo-react',
-        navLink: 'https://weather-app-three-snowy.vercel.app/'
+        navLink: 'https://weather-blush-iota.vercel.app/'
     },
     {
         folder: <FolderIcon />,
@@ -68,13 +68,13 @@ const projects = [
         folder: <FolderIcon />,
         link: <OpenInNewIcon />,
         github: <GitHubIcon />,
-        title: 'Building Teranga livre',
+        title: 'Building Teranga livre App',
         desc: 'Teranga Livre is a versatile online platform that facilitates the buying and selling of books. The platform is a marketplace where users can purchase books. ',
         stack1: 'Mongodb',
         stack2: 'ExpressJS',
         stack3: 'ReactJS',
         gitLink: 'https://github.com/issa2580/terangalivre',
-        navLink: 'https://terangalivre-lkzl.vercel.app/'
+        navLink: 'https://terangalivre.com/'
     }
 ]
 
