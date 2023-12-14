@@ -56,18 +56,13 @@ const hoverSpanStyle = {
 }as const
 
 const handleDownload = () => {
-    const fileUrl = '../resume/Issa_Diop_Full_Stack_Developer.pdf'; // Remplacez par le chemin correct
-
-    // Créez un élément <a> temporaire pour déclencher le téléchargement
+    const fileUrl = import.meta.env.BASE_URL + 'resume/Issa_Diop_Full_Stack_Developer.pdf';
+    // const fileUrl = '../resume/Issa_Diop_Full_Stack_Developer.pdf'; 
     const link = document.createElement('a');
     link.href = fileUrl;
     link.download = 'resume.pdf';
     document.body.appendChild(link);
-    
-    // Cliquez sur l'élément <a> pour déclencher le téléchargement
     link.click();
-
-    // Supprimez l'élément <a> temporaire
     document.body.removeChild(link);
 };
 
