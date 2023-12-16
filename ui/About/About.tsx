@@ -119,7 +119,7 @@ const About = () => {
                     </Typography>
                     <Divider 
                         sx={{
-                            width: {xs: '50px', md: '200pxpx'}, 
+                            width: {xs: '50px', md: '200px'}, 
                             height: 0.1, 
                             border: '1px solid #64ffda',
                         }} 
