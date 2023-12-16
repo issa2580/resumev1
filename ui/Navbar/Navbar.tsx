@@ -57,7 +57,6 @@ const hoverSpanStyle = {
 
 const handleDownload = () => {
     const fileUrl = import.meta.env.BASE_URL + 'Issa_Diop_Full_Stack_Developer.pdf';
-    // const fileUrl = '../resume/Issa_Diop_Full_Stack_Developer.pdf'; 
     const link = document.createElement('a');
     link.href = fileUrl;
     link.download = 'resume.pdf';

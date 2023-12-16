@@ -74,7 +74,7 @@ import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem
 
 
 const Experience = () => {
-    const [clickedTab, setClickedTab] = React.useState(1)
+    const [clickedTab, setClickedTab] = React.useState(0)
 
     return (
         <Box 
@@ -189,7 +189,6 @@ const Experience = () => {
                               textAlign: {xs: 'center', md: 'center'},
                               justifyContent: {xs: 'center', md: 'center'},
                               alignItems: {xs: 'center', md: 'center'},
-                              // background: 'red'
                             }}>
                             <Box 
                               sx={{
