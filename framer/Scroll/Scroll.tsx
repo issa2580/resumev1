@@ -58,8 +58,11 @@ function Scroll() {
   }, []);
 
   return (
-    <div style={{ height: '1px', background: '#64ffda', position: 'fixed', top: '80px', left: '0', width: '0' }}>
+    <div 
+      style={{ height: '2px', background: '#64ffda', position: 'fixed', top: '80px', left: '0', width: '0' }}
+      >
       <motion.div
+        transition={{ duration: 0.5 }}
         style={{
           width: '0%',
           height: '100%',
