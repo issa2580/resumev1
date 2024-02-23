@@ -153,7 +153,7 @@ const Home = () => {
         >
           <Link
             sx={{ textDecoration: "none" }}
-            href="rootkit-five.vercel.app/"
+            href="https://rootkit-five.vercel.app/"
             target="_blank"
           >
             <Typography
