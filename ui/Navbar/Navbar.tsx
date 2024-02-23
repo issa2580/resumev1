@@ -66,22 +66,13 @@ const hoverSpanStyle = {
 // };
 
 const handleDownload = () => {
-  // Spécifiez le chemin relatif vers votre fichier PDF
   const fileUrl =
     "https://resumev1.vercel.app/resume/Issa_Diop_Developpeur_Full_Stack.pdf";
-
-  // Créez un élément <a> pour télécharger le fichier
   const link = document.createElement("a");
   link.href = fileUrl;
-  link.download = "resume.pdf";
-
-  // Ajoutez le lien à la fin du document
+  link.download = "Issa_Diop_Developpeur_Full_Stack.pdf";
   document.body.appendChild(link);
-
-  // Déclenchez le téléchargement du fichier
   link.click();
-
-  // Supprimez le lien du document une fois le téléchargement terminé
   document.body.removeChild(link);
 };
 
