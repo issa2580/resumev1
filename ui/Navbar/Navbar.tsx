@@ -54,17 +54,6 @@ const hoverSpanStyle = {
   },
 } as const;
 
-// const handleDownload = () => {
-//   const fileUrl =
-//     import.meta.env.BASE_URL + "/resume/Issa_Diop_Developpeur_Full_Stack.pdf";
-//   const link = document.createElement("a");
-//   link.href = fileUrl;
-//   link.download = "resume.pdf";
-//   document.body.appendChild(link);
-//   link.click();
-//   document.body.removeChild(link);
-// };
-
 const handleDownload = () => {
   const fileUrl =
     "https://drive.google.com/file/d/10rm3OYT6UPCVkHCveq30t0ugLg0C9s7v/view?usp=sharing";
