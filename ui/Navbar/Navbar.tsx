@@ -56,7 +56,7 @@ const hoverSpanStyle = {
 
 const handleDownload = () => {
   const fileUrl =
-    "https://resumev1.vercel.app/resume/Issa_Diop_Developpeur_Full_Stack.pdf";
+    "https://resumev1.vercel.app/Issa_Diop_Developpeur_Full_Stack.pdf";
   const link = document.createElement("a");
   link.href = fileUrl;
   link.download = "resume.pdf";
