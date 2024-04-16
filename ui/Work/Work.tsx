@@ -86,7 +86,7 @@ const projects = [
     stack2: "NestJS",
     stack3: "PostgreSQL",
     gitLink: "https://github.com/issa2580/cristinakitchen",
-    navLink: "https://terangalivre.com/",
+    navLink: "https://cristinakitchen.vercel.app/en/",
   },
 ];
 
